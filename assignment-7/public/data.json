@@ -1,0 +1,76 @@
+{
+  "courses": [
+    {
+      "courseName": "Introduction to Programming",
+      "photo": "intro_to_programming.png",
+      "intro": "Learn the basics of programming and algorithmic thinking.",
+      "description": "This course covers fundamental programming concepts using a popular programming language.",
+      "price": 49.99,
+      "creditHours": 3
+    },
+    {
+      "courseName": "Web Development Fundamentals",
+      "photo": "web_development_fundamentals.png",
+      "intro": "Get started with building websites and web applications.",
+      "description": "Learn HTML, CSS, and JavaScript to create interactive web pages.",
+      "price": 59.99,
+      "creditHours": 4
+    },
+    {
+      "courseName": "Data Structures and Algorithms",
+      "photo": "data_structures_algorithms.png",
+      "intro": "Master data structures and algorithms for efficient problem-solving.",
+      "description": "Explore common data structures and algorithms used in software development.",
+      "price": 69.99,
+      "creditHours": 4
+    },
+    {
+      "courseName": "Mobile App Development",
+      "photo": "mobile_app_development.png",
+      "intro": "Build mobile apps for iOS and Android platforms.",
+      "description": "Learn to develop mobile applications using popular frameworks.",
+      "price": 79.99,
+      "creditHours": 4
+    },
+    {
+      "courseName": "Python for Data Science",
+      "photo": "python_data_science.png",
+      "intro": "Utilize Python for data analysis and machine learning.",
+      "description": "Learn to work with data, perform statistical analysis, and build predictive models.",
+      "price": 89.99,
+      "creditHours": 5
+    },
+    {
+      "courseName": "Graphic Design Fundamentals",
+      "photo": "graphic_design_fundamentals.png",
+      "intro": "Learn the basics of graphic design and visual communication.",
+      "description": "Explore principles of design, typography, and layout for creating visually appealing content.",
+      "price": 69.99,
+      "creditHours": 3
+    },
+    {
+      "courseName": "Digital Marketing Strategies",
+      "photo": "digital_marketing_strategies.png",
+      "intro": "Develop effective digital marketing campaigns.",
+      "description": "Learn about SEO, social media marketing, content creation, and online advertising.",
+      "price": 79.99,
+      "creditHours": 4
+    },
+    {
+      "courseName": "Artificial Intelligence Essentials",
+      "photo": "ai_essentials.png",
+      "intro": "Gain insights into the world of artificial intelligence and machine learning.",
+      "description": "Explore the fundamentals of AI, neural networks, and deep learning.",
+      "price": 99.99,
+      "creditHours": 5
+    },
+    {
+      "courseName": "E-commerce Business Strategies",
+      "photo": "ecommerce_business_strategies.png",
+      "intro": "Learn to start and grow a successful e-commerce business.",
+      "description": "Covering topics from product sourcing to digital marketing for online stores.",
+      "price": 89.99,
+      "creditHours": 4
+    }
+  ]
+}
