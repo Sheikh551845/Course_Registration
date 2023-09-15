@@ -1,13 +1,11 @@
 import React,{useEffect, useState} from 'react';
 
 
-function Card() {
-
-    useEffect(()=>{
-        fetch(".\data.json")
-        .then((res)=>res.json)
-        .then((data)=>console.log(data));
-     },[]);
+function Card(props) {
+    
+  const {courseName, intro, description, price, creditHours}=props.course;
+  console.log(courseName);
+  
 
   return (
     <div>
@@ -16,17 +14,17 @@ function Card() {
     <img src="Asset/ai_essentials.png" alt="" className="rounded-xl w-[300px] p-2" />
   </figure>
   <div className="card-body  ">
-    <h2 className="card-title text-left">Introduction</h2>
-    <p className="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore numquam quibusdam quod odio, obcaecati perspiciatis porro officiis deleniti eveniet minima nam, commodi quo aspernatur sunt omnis illo. Accusantium, necessitatibus quod?</p>
+    <h2 className="card-title text-left">{courseName}</h2>
+    <p className="text-left">{description}</p>
     <div className="flex gap-10">
     <div className="flex gap-2 items-center">
         <img src="Asset/dollar.png" className="w-4 h-4"></img>
-    <p >Price : <span>15000</span></p>
+    <p >Price : {price}</p>
     </div>
     
     <div className="flex gap-2 items-center">
         <img src="Asset/book.png" className="w-4 h-4"></img>
-    <p >credit : <span>2</span></p>
+    <p >credit : {creditHours}</p>
     </div>
     </div>
    
@@ -37,7 +35,9 @@ function Card() {
     </div>
   </div>
 </div>
+
     </div>
+    
   )
 }
 
