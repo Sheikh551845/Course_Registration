@@ -3,15 +3,19 @@ import React,{useEffect, useState} from 'react';
 
 function Card(props) {
     
-  const {courseName, intro, description, price, creditHours}=props.course;
-  console.log(courseName);
+  const {courseName, intro, description, price, creditHours, photo}=props.course;
+ 
+
+  const imageUrl =  `Asset/${photo}`
+
+  
   
 
   return (
     <div>
  <div className="card w-80 bg-base-100 shadow-xl">
   <figure className="">
-    <img src="Asset/ai_essentials.png" alt="" className="rounded-xl w-[300px] p-2" />
+    <img src={imageUrl} alt="" className="rounded-xl w-[300px] p-2" />
   </figure>
   <div className="card-body  ">
     <h2 className="card-title text-left">{courseName}</h2>
