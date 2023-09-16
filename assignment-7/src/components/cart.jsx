@@ -41,9 +41,9 @@ selectedCourse.forEach(element => {
     ))}
    
     <hr style={{ color: 'black', width: '90%' ,margin:'auto'}}></hr>
-    <p className='text-left py-2'>Total Credit Hour: </p>
+    <p className='text-left py-2'>Total Credit Hour: {tHour}</p>
     <hr style={{ color: 'black', width: '90%' ,margin:'auto'}}></hr>
-    <p className='text-left'>Total Credit Price: {tPrice} USD </p>
+    <p className='text-left'>Total Credit Price: {tPrice.toFixed(2)} USD </p>
   </div>
 </div>
     </div>

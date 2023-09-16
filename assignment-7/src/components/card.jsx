@@ -10,26 +10,26 @@ function Card({course,buttonHandle}) {
 
  
 
-  const imageUrl =  `Asset/${photo}`
+  
 
 
   return (
     <div>
  <div className="card w-80 bg-base-100 shadow-xl h-[450px]">
   <figure className="">
-    <img src={imageUrl} alt="" className="rounded-xl w-[300px] p-2" />
+    <img src={photo} alt="" className="rounded-xl w-[300px] p-2" />
   </figure>
   <div className="card-body  ">
     <h2 className="card-title text-left">{courseName}</h2>
     <p className="text-left">{description}</p>
     <div className="flex gap-10 py-2">
     <div className="flex gap-2 items-center">
-        <img src="Asset/dollar.png" className="w-4 h-4"></img>
+        <img src="https://i.ibb.co/VwD3HjN/dollar.png" className="w-4 h-4"></img>
     <p >Price : {price}</p>
     </div>
     
     <div className="flex gap-2 items-center">
-        <img src="Asset/book.png" className="w-4 h-4"></img>
+        <img src="https://i.ibb.co/M17bzqG/book.png" className="w-4 h-4"></img>
     <p >credit : {creditHours}</p>
     </div>
     </div>
