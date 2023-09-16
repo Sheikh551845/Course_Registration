@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
+
+
 function Card({course,buttonHandle}) {
  
     
@@ -10,9 +12,10 @@ function Card({course,buttonHandle}) {
 
   const imageUrl =  `Asset/${photo}`
 
+
   return (
     <div>
- <div className="card w-80 bg-base-100 shadow-xl">
+ <div className="card w-80 bg-base-100 shadow-xl h-[450px]">
   <figure className="">
     <img src={imageUrl} alt="" className="rounded-xl w-[300px] p-2" />
   </figure>
