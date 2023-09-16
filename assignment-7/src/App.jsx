@@ -13,25 +13,54 @@ function App() {
 
   const[allCourse,setAllCourse]= useState([]);
 
+  const [totalHour, SetTotalHour]=useState(0);
+  const [totalRemainHour, SetTotalRemainHour]=useState(0);
+ 
+
+
     useEffect(()=>{
       fetch('data.json')
       .then(response => response.json())
       .then(json => setAllCourse(json))       
      },[]);
      const courseArray =allCourse.courses;
+     
 
     
      const [selectedCourse, setSelectedCourse] = useState([]); 
 
     const buttonHandle = (course)=>{
+      
+      let tHour=course.creditHours;
+      let rHour=20-course.creditHours- course.creditHours;
     const isExist=selectedCourse.find((item)=> item.courseName == course.courseName);
 
     if(isExist){
       return  toast.warn('Course already added')
     }
   else{
+    selectedCourse.forEach(element => {
+      tHour=tHour+element.creditHours;
+      rHour=rHour-element.creditHours;
+    });
+
+    if(totalRemainHour<0)
+    {
+      return  toast.warn('Credit limit reached')
+    }
+    if(totalRemainHour<-1)
+    {
+      return  toast.warn('Credit limit reached')
+    }
+    
     setSelectedCourse([...selectedCourse, course]);
+    SetTotalRemainHour(rHour);
+    SetTotalHour(tHour);
+    console.log(totalRemainHour);
+    
+ 
   }
+  
    
   
    }
