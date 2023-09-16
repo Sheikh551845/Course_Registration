@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 function Card({course,buttonHandle}) {
-;
+ 
     
   const {courseName, intro, description, price, creditHours, photo}=course;
 
@@ -32,7 +32,7 @@ function Card({course,buttonHandle}) {
     </div>
      
     <div className="mx-auto">
-      <button className="btn btn-primary w-64" onClick={()=>buttonHandle(price,creditHours,courseName)}>Select</button>
+      <button className="btn btn-primary w-64" onClick={()=>buttonHandle(course)}>Select</button>
     </div>
   </div>
 </div>

@@ -18,29 +18,17 @@ function App() {
      },[]);
      const courseArray =allCourse.courses;
 
-     const [selectedPrice, setSelectedPrice] = useState([]);
-     const [selectedCredit,setSelectedCredit] = useState([]);
+    
      const [selectedCourse, setSelectedCourse] = useState([]); 
 
-    const buttonHandle = (price,credit,course)=>{
+    const buttonHandle = (course)=>{
 
-    setSelectedPrice([...selectedPrice, price]);
-    setSelectedCredit([...selectedCredit, credit]);
+  
     setSelectedCourse([...selectedCourse, course]);
-    
-    
-
+  
    }
-  
-   console.log(selectedPrice)
-   console.log(selectedCredit);
-   console.log(selectedCourse);
    
-
-    
   
-    
-
   return (
     <>
     <div className='max-w-lg md:max-w-2xl lg:max-w-screen-2xl mx-auto p-3'>
@@ -53,8 +41,7 @@ function App() {
        }
       </div>
     
-     <Cart></Cart>
-     <Test></Test>
+     <Cart selectedCourse={selectedCourse} ></Cart>
    
     </div>
    
