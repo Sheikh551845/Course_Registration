@@ -1,15 +1,14 @@
 import React,{useEffect, useState} from 'react';
+import PropTypes from 'prop-types';
 
-
-function Card(props) {
+function Card({course,buttonHandle}) {
+;
     
-  const {courseName, intro, description, price, creditHours, photo}=props.course;
+  const {courseName, intro, description, price, creditHours, photo}=course;
+
  
 
   const imageUrl =  `Asset/${photo}`
-
-  
-  
 
   return (
     <div>
@@ -20,7 +19,7 @@ function Card(props) {
   <div className="card-body  ">
     <h2 className="card-title text-left">{courseName}</h2>
     <p className="text-left">{description}</p>
-    <div className="flex gap-10">
+    <div className="flex gap-10 py-2">
     <div className="flex gap-2 items-center">
         <img src="Asset/dollar.png" className="w-4 h-4"></img>
     <p >Price : {price}</p>
@@ -31,19 +30,24 @@ function Card(props) {
     <p >credit : {creditHours}</p>
     </div>
     </div>
-   
-
-  
-    <div className="card-actions mx-auto">
-      <button className="btn btn-primary w-64">Select</button>
+     
+    <div className="mx-auto">
+      <button className="btn btn-primary w-64" onClick={()=>buttonHandle(price,creditHours,courseName)}>Select</button>
     </div>
   </div>
 </div>
 
+
     </div>
     
   )
+};
+
+Card.propTypes={
+     buttonHandle : PropTypes.func,
+     course : PropTypes.object
 }
+
 
 export default Card
 

@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Card from './components/card'
 import Cart from './components/cart'
+import Test from './components/test';
 
 
 function App() {
+
+  
 
   const[allCourse,setAllCourse]= useState([]);
 
@@ -14,7 +17,25 @@ function App() {
       .then(json => setAllCourse(json))       
      },[]);
      const courseArray =allCourse.courses;
-     console.log(courseArray);
+
+     const [selectedPrice, setSelectedPrice] = useState([]);
+     const [selectedCredit,setSelectedCredit] = useState([]);
+     const [selectedCourse, setSelectedCourse] = useState([]); 
+
+    const buttonHandle = (price,credit,course)=>{
+
+    setSelectedPrice([...selectedPrice, price]);
+    setSelectedCredit([...selectedCredit, credit]);
+    setSelectedCourse([...selectedCourse, course]);
+    
+    
+
+   }
+  
+   console.log(selectedPrice)
+   console.log(selectedCredit);
+   console.log(selectedCourse);
+   
 
     
   
@@ -28,11 +49,13 @@ function App() {
     <div className="flex gap-10">
       <div className="w-3/4 flex gap-8 flex-wrap">
        {
-        courseArray?.map((course, idx)=> (<Card key={idx} course={course}></Card>))
+        courseArray?.map((course, idx)=> (<Card key={idx} course={course} buttonHandle={buttonHandle}></Card>))
        }
       </div>
     
      <Cart></Cart>
+     <Test></Test>
+   
     </div>
    
     </div>

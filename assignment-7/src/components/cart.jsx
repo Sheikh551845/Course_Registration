@@ -1,9 +1,14 @@
 import React from 'react'
 
 function Cart() {
+
+  
+   
+  
+
   return (
     <div>
-       <div className="card w-[330px] bg-base-100 shadow-xl">
+  <div className="card w-[330px] bg-base-100 shadow-xl">
   
   <div className="card-body">
     <h2 className="card-title text-left text-[#2F80ED]">Credit Hour Remaining 7 hr</h2>
@@ -15,14 +20,10 @@ function Cart() {
     <p className='text-left'>Total Credit Hour: </p>
     <hr style={{ color: 'black', width: '90%' ,margin:'auto'}}></hr>
     <p className='text-left'>Total Credit Price: </p>
-
-  
-    <div className="card-actions mx-auto">
-      <button className="btn btn-primary w-64">Select</button>
-    </div>
   </div>
 </div>
     </div>
+    
   )
 }
 
